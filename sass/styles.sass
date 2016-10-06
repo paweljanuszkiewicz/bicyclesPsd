@@ -1,0 +1,417 @@
+@import "_reset"
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700'
+
+//mixins
+=caps
+  text-transform: uppercase
+
+//styles
+body
+  font-size: 16px
+  font-family: 'Lato', Arial, sans-serif
+  background-color: #e5e4ea
+.container
+  max-width: 1600px
+  min-width: 319px
+  margin: 0 auto
+h1, p
+  letter-spacing: .08em
+h1
+  +caps
+  font-weight: 700
+  color: #353738
+  text-align: center
+p
+  color: #848789
+  line-height: 2em
+img
+  display: block
+  margin: 0 auto
+
+nav
+  background-image: url('../images/menu-bg.jpg')
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  width: 100%
+  height: 100vh
+  max-height: 800px
+  ul
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+  li
+    vertical-align: middle
+    &:first-child::after, &:last-child::before
+      content: '.'
+  img
+    margin-left: 30px
+    margin-right: 30px
+  a
+    padding: 35px
+    display: inline-block
+    color: #4d4959
+    text-decoration: none
+    +caps
+    &:hover
+      text-decoration: underline
+
+@media (max-width: 799px)
+  nav
+    height: auto
+    ul
+      flex-direction: column
+    li
+      vertical-align: middle
+      &:first-child::after, &:last-child::before
+        content: none
+      order: 1
+      background-color: rgba(#f7f7f7, .9)
+      width: 100%
+      text-align: center
+    li.logo
+      order: -1
+      // background-color: transparent
+      & > a
+        padding-top: 35px
+    a
+      padding: 0
+      padding-bottom: 45px
+    li:first-child
+      padding-top: 45px
+
+.about
+  background-color: #f7f7f7
+  padding-top: 110px
+  padding-bottom: 140px
+  h1, p
+    padding-left: 20px
+    padding-right: 20px
+  h1
+    margin-top: 35px
+    margin-bottom: 30px
+  p
+    max-width: 1050px
+    text-align: center
+    margin: 0 auto
+.flex
+  display: flex
+  flex-wrap: wrap
+  .w2
+    flex: 2 1 auto
+  .w1
+    flex: 0 0 calc(1600px / 3)
+    background-color: #fff
+  .bottom
+    height: 200px
+    background-position: center top
+    background-repeat: no-repeat
+    background-size: cover
+
+.c3
+  .w1
+    flex: 0 0 calc(100% / 3)
+
+.reverse
+  flex-direction: row-reverse
+
+@media (max-width: 1066px)
+  .work
+    .w1
+      flex: 0 1 50%
+  .c3
+    .w1
+      flex: 0 1 50%
+    .w1:last-child
+      display: none
+
+@media (max-width: 799px)
+  .work
+    .flex:not(.c3)
+      flex-direction: column-reverse
+    .c3
+      flex-direction: column
+    .w2.bg, .w1.bg
+      height: 400px
+    .bottom
+      display: none
+
+.flex-logo
+  display: flex
+  align-items: center
+  justify-content: center
+.dscr
+  width: 100%
+  img
+    margin-top: 70px
+  h1
+    margin-top: 30px
+    margin-bottom: 25px
+  p
+    text-align: justify
+    margin: 0 auto 90px auto
+    max-width: 400px
+    padding-left: 20px
+    padding-right: 20px
+
+.bg
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+.bg-left
+  background-position: left top
+.bg-right
+  background-position: right top
+
+.bike-1-big
+  background-image: url('../images/bike-1-big.jpg')
+.bike-1-small
+  background-image: url('../images/bike-1-small.jpg')
+.bike-2-big
+  background-image: url('../images/bike-2-big.jpg')
+.bike-2-small
+  background-image: url('../images/bike-2-small.jpg')
+.bike-3-big-1
+  background-image: url('../images/bike-3-big-1.jpg')
+.bike-3-big-2
+  background-image: url('../images/bike-3-big-2.jpg')
+.bike-3-small
+  background-image: url('../images/bike-3-small.jpg')
+
+.twitter
+  background-color: #f7f7f7
+  width: 100%
+  padding: 125px 0 65px 0
+  .dots
+    text-align: center
+    margin-top: 100px
+  .dot
+    display: inline-block
+    margin: 5px
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    border: 1px solid #a9afb3
+    cursor: pointer
+    transition: background 400ms ease-in-out
+    &.active
+      background-color: #a9afb3
+.tweet
+  display: block
+  text-align: center
+  font-size: 18px
+  letter-spacing: .1em
+  display: none
+  h2
+    font-weight: 700
+    color: #353738
+    display: inline-block
+    margin: 35px 0 30px 0
+  p
+    padding-right: 20px
+    padding-left: 20px
+    font-style: italic
+    margin: 0 auto
+    text-align: center
+    font-size: 20px
+    max-width: 1040px
+    line-height: 1.7em
+    margin-bottom: 30px
+  .time
+    display: inline-block
+    padding-left: 8px
+    padding-right: 0
+    font-weight: 300
+
+//shop photos
+.shop
+  .green
+    opacity: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(#64c29e, .7)
+    cursor: pointer
+    transition: opacity 400ms ease-in-out
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+    &:hover
+      opacity: 1
+  p
+    color: #fff
+    font-weight: 700
+    font-size: 14px
+    line-height: 1em
+    margin-top: 10px
+    +caps
+  img:not(.icon)
+    width: 100%
+    height: 100%
+  .wrapper
+    position: relative
+    display: inline-block
+    float: left
+    width: 50%
+    height: 50%
+    max-width: 267px
+    vertical-align: bottom
+    display: block
+  .mw-533
+    width: 100%
+    max-width: 534px
+  .shop-1, .shop-4
+    flex-basis: 356px
+    flex-grow: 2
+  .shop-2, .shop-3
+    flex-basis: 178px
+    flex-grow: 1
+.shop-2, .shop-3
+  .wrapper
+    width: 100%
+    height: 100%
+
+@media (max-width: 1067px) and (min-width: 712px)
+  .shop-4
+    .wrapper
+      width: 25%
+      height: 100%
+    .mw-533
+      width: 50%
+
+@media (max-width: 375px)
+  .shop
+    .shop-2, .shop-3
+      flex-basis: 50%
+
+.discover-shop
+  width: 100%
+  background-color: #282f35
+  padding: 75px 0
+  text-align: center
+  button
+    +caps
+    padding: 20px 55px
+    font-size: 14px
+    font-weight: 700
+    color: #fff
+    background-color: transparent
+    border: 1px solid #94979a
+    cursor: pointer
+    transition: all 400ms ease
+    &:hover
+      color: #282f35
+      background: #fff
+      border: 1px solid #fff
+.contact
+  padding: 110px 10px
+  text-align: center
+  background-color: #fff
+  p
+    font-style: italic
+    letter-spacing: .1em
+    font-size: 24px
+    margin: 35px 0
+  input
+    vertical-align: middle
+    &:focus
+      outline: 0
+  input[type='text']
+    width: 400px
+    padding: 25px
+    font-size: 20px
+    color: #929292
+    font-style: italic
+  input[type='submit']
+    padding: 25px 45px
+    padding-bottom: 24px
+    background-color: #64c29e
+    font-size: 24px
+    font-weight: 300
+    +caps
+    color: #fff
+    border: 0
+    margin: 16px
+    margin-right: 0
+    cursor: pointer
+    transition: background-color 400ms ease
+    &:hover
+      background-color: #88d9ba
+@media (max-width: 580px)
+  .contact
+    input[type='text']
+      font-size: 16px
+      padding: 10px
+      width: 100%
+      max-width: 280px
+    input[type='submit']
+      font-size: 16px
+      padding: 12px 16px
+@media (max-width: 400px)
+  .contact
+    input[type='submit']
+      margin: 16px
+
+footer
+  padding: 100px 0 60px 0
+  background-color: #f7f7f7
+  & > div
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    max-width: 1120px
+    padding-left: 20px
+    padding-right: 20px
+  .adress, .social, .copy
+    flex: 1 1 180px
+    padding-bottom: 40px
+  p, strong
+    line-height: 1.3em
+  p
+    font-size: 14px
+    font-style: italic
+  strong
+    font-size: 16px
+    font-weight: bold
+    color: #848789
+  img
+    display: inline-block
+    margin-left: 7px
+    margin-right: 7px
+.social
+  text-align: center
+  padding-bottom: 20px
+.copy
+  text-align: right
+  p, img
+    display: inline-block
+    vertical-align: middle
+  img
+    padding-left: 5px
+
+@media (max-width: 799px)
+  footer
+    padding-bottom: 40px
+    .adress, .social
+      flex-basis: 50%
+    .social
+      text-align: right
+    .copy
+      text-align: center
+      margin-top: 10px
+      width: 100%
+
+@media (max-width: 580px)
+  footer
+    & > div
+      flex-flow: column
+    .adress, .social, .copy
+      flex-basis: auto
+      width: 100%
+      text-align: center

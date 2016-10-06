@@ -1,0 +1,149 @@
+doctype html
+html(lang='en')
+  head
+    title Bicycles PSD
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/styles.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')  
+    script(src='js/script.js')
+  body
+    .container
+      nav
+        .hamburger: div
+        ul
+          li 
+            a(href='#about') About us
+          li 
+            a(href='#work') Work
+          li.logo
+            a(href='#'): img(src='images/logo-nav.png')
+          li 
+            a(href='#shop') Shop
+          li 
+            a(href='#contact') Contact      
+      #about.about
+        img(src='images/green-icon-1.png')
+        h1 A new generation of vintage bike
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+      #work.work
+        .flex.reverse
+          .w1
+            .dscr
+              img(src='images/green-icon-2.png')
+              h1 Vintage Oliva
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+            .bottom.bike-1-small
+          .w2.flex-logo.bike-1-big.bg.bg-left
+            img(src='images/white-logo-1.png')    
+        .flex
+          .w1
+            .dscr
+              img(src='images/green-icon-3.png')
+              h1 La Boriosa
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+            .bottom.bike-2-small.bg
+          .w2.flex-logo.bike-2-big.bg.bg-right
+            img(src='images/white-logo-2.png')
+        .flex.c3
+          .w1.flex-logo.bike-3-big-1.bg
+            img(src='images/white-logo-3.png')
+          .w1
+            .dscr
+              img(src='images/green-icon-4.png')
+              h1 Vintage Oliva
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+            .bottom.bike-3-small
+          .w1.bike-3-big-2.bg
+      .twitter
+        img(src='images/twitter.png')
+        .tweet.active
+          h2 AOD New York @aod
+          p.time / 35min
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+        .tweet
+          h2 BCE San Francisco @bce
+          p.time / 42min
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.  
+        .tweet
+          h2 DEF Chicago @def
+          p.time / 51min
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+        .dots
+          span.dot.active
+          span.dot
+          span.dot    
+      #shop.shop.flex
+        .shop-1
+          .wrapper
+            .green 
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-1.jpg')
+          .wrapper
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-2.jpg')
+          .wrapper.mw-533
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-6.jpg')
+        .shop-2
+          .wrapper
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-3.jpg')
+        .shop-3
+          .wrapper
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-4.jpg')
+        .shop-4
+          .wrapper.mw-533
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-5.jpg')
+          .wrapper
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-7.jpg')
+          .wrapper
+            .green
+              div
+                img(src='images/shop-now.png').icon
+                p Shop now
+            img(src='images/shop-8.jpg')
+      .discover-shop
+        button Discover the shop
+      #contact.contact
+        img(src='images/logo-nav.png')
+        p Stay on the saddle!
+        form
+          input(type='text', value='enter your email...')
+          input(type='submit', value='Go')
+      footer
+        div
+          .adress
+            strong AOD New York
+            p 2250 Lexington Avenue 
+            p New York, NY 10035  - info@domain.com
+          .social
+            a(href='#'): img(src='images/social-1.png')
+            a(href='#'): img(src='images/social-2.png')
+            a(href='#'): img(src='images/social-3.png')
+          .copy
+            p Handcrafted by
+            img(src='images/yebo.png')
